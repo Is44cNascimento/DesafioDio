@@ -27,10 +27,9 @@ public class ContaTerminal {
 
 
         DadosBancarios dados = new DadosBancarios(numero,agencia,nomeCliente,2001);
-
-
-        System.out.println(dados.mostrarConta());
-
+        dados.setNumero(numero);
+        dados.setAgencia(agencia);
+        dados.setNomeCliente(nomeCliente);
 
         System.out.println("Para entrar na conta digite: ");
 
