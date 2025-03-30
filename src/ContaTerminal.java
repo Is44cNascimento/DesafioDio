@@ -7,7 +7,7 @@ public class ContaTerminal {
 
 
         System.out.println(dados.mostrarConta());
-
+        dados.entrarConta(dados.PermitirEntrar(dados.getNumero(), dados.getAgencia(), dados.getNomeCliente()));
 
     }
 }

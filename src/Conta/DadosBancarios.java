@@ -1,5 +1,7 @@
 package Conta;
 
+import java.util.Scanner;
+
 public class DadosBancarios {
 
     private int numero;
@@ -50,12 +52,33 @@ public class DadosBancarios {
         this.nomeCliente = nomeCliente;
     }
 
-    public void entrarConta(int numero,String agencia, String nomeCliente, double saldo) {
+    public Boolean PermitirEntrar(int numero,String agencia,String nomeCliente) {
+
+        if (numero == this.numero && agencia.equals(this.agencia) && nomeCliente.equals(this.nomeCliente)) {
+            return true;
+        }else {
+            return false;
+        }
+
+    }
+
+    public void entrarConta(boolean entrada) {
+        if (entrada == true) {
+            operacoes();
 
 
+        }
 
 
     }
+
+    public static void operacoes(){
+        Scanner sc = new Scanner(System.in);
+
+
+    }
+
+
 
 public  String mostrarConta() {
         String dados = getAgencia() + " " + getNumero() + " "+ getNomeCliente()+ " " + getSaldo();
