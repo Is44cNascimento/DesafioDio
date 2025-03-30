@@ -57,6 +57,11 @@ public class DadosBancarios {
 
     }
 
+public  String mostrarConta() {
+        String dados = getAgencia() + " " + getNumero() + " "+ getNomeCliente()+ " " + getSaldo();
+
+        return dados;
+}
 
 
 }
