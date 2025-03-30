@@ -72,7 +72,12 @@ public class DadosBancarios {
 
     }
 
-    private void operacoes(){
+
+    public boolean continuarConta() {
+        return operacoes();
+    }
+
+    private boolean operacoes(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Operacoes da conta:\n 1-Sacar (Sacar) \n 2-Depositar (Depositar) \n 3-Sair");
 
@@ -85,9 +90,23 @@ public class DadosBancarios {
             System.out.println("Digite o valor de saque: ");
             double valorSaque = sc.nextDouble();
             setSaldo(saldo - valorSaque);
+            return true;
 
+        } if (op == 2) {
+            double saldo = getSaldo();
+            System.out.println("Seu saldo atual: " + saldo);
+            System.out.println("Digite o valor de deposito: ");
+            double valorDeposito = sc.nextDouble();
+            setSaldo(saldo + valorDeposito);
+            return true;
+        }else if (op == 3) {
+            return false;
         }
+        return true;
+
     }
+
+
 
 
 
